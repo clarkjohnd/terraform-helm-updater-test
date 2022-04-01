@@ -1,0 +1,16 @@
+name: Terraform Helm Update
+on:
+  workflow_dispatch:
+
+jobs:
+  autorelease:
+    name: Update Helm releases in Terraform modules
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code so it's mounted to the Docker action
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      # Run the docker action
+      - name: Helm version update
+        uses: clarkjohnd/terraform-helm-updater@v0.0.1
