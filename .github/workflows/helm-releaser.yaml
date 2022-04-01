@@ -13,4 +13,6 @@ jobs:
       
       # Run the docker action
       - name: Helm version update
-        uses: clarkjohnd/terraform-helm-updater@v0.0.1
+        uses: clarkjohnd/terraform-helm-updater@v0.0.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
