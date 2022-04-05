@@ -6,3 +6,15 @@
   repo: argo
   url: https://argoproj.github.io/argo-helm
   version: 1.10.0
+- name: external-dns
+  repo: external-dns
+  url: https://kubernetes-sigs.github.io/external-dns/
+  version: 1.7.1
+- name: aws-load-balancer-controller
+  repo: eks-charts
+  url: https://aws.github.io/eks-charts
+  version: 1.4.1
+- name: aws-vpc-cni
+  repo: eks-charts
+  url: https://aws.github.io/eks-charts
+  version: 1.1.14
