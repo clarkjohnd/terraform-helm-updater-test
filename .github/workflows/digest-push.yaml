@@ -2,10 +2,11 @@ name: Update Image Digests
 on:
   push:
     paths:
-      - 'charts.yaml'
-      - 'images.yaml'
+      - 'charts.yaml' # Get digests on manual charts.yaml change
+      - 'images.yaml' # Get digests if someone has changed this file
     branches-ignore:
-      - 'main'
+      - 'main'        # Ignore when PR'd into main
+      - 'd/helm/**'   # Ignore Helm version upgrade branches
   workflow_dispatch:
 
 jobs:
