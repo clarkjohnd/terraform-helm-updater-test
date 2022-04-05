@@ -13,6 +13,11 @@ jobs:
       
       # Run the docker action
       - name: Helm version update
-        uses: clarkjohnd/terraform-helm-updater@v0.0.2
+        uses: clarkjohnd/terraform-helm-digests@v0.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          quay-username: ${{ secrets.QUAY_USERNAME }}
+          quay-password: ${{ secrets.QUAY_PASSWORD }}
+          gcr-json-key: ${{ secrets.GCR_JSON_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ECR_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ECR_SECRET_ACCESS_KEY }}
