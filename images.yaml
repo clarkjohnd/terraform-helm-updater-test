@@ -1,0 +1,48 @@
+- registry: quay.io
+  name: argoproj/workflow-controller
+  digests:
+    amd64: sha256:2b8715e71040e332b0faea68f0724bf7c6e193a61d5babecac03a6d68fe86efc
+    arm64: sha256:614275080106101e49c8227a98d12951a73a4c3a9456dc684cff8775a543a35c
+- registry: quay.io
+  name: argoproj/argoexec
+  digests:
+    amd64: sha256:aeb0699e6a586338403d3baa7b76b7c33b8478e04ba13420b0bc60ef78d9f6f5
+    arm64: sha256:1a90d6055480de3f3d1288fd6b8093079ec6fefc4d63dc8cc6510e42dded356f
+- registry: quay.io
+  name: argoproj/argocli
+  digests:
+    amd64: sha256:6d88af1c3af3835a14b229cfa5100032a364e1613bdbdf6d6f57197def8dc06f
+    arm64: sha256:22750b5bf703e8a9eba71a4b4d9d67bfcbbc46284ecece12dff5b540845d815d
+- registry: quay.io
+  name: argoproj/argo-events
+  digests:
+    amd64: sha256:1ccaabebb00221e388000bca20e8be2388fdec417285cc3476ef63495d1f739f
+    arm64: sha256:1700d08ef7a2395ea3ba6825275853904c20461ad55dfde04c9d52f13ad4ba5a
+- name: library/nats-streaming
+  digests:
+    amd64: sha256:809711b5dd5425e620c9e1dbfdc4a87720bc12f9a7834ef3da865106d164be8e
+    arm64: sha256:96652223cce95275138363a54affb8663ba46bc75831c2a9535375ab6d922143
+- name: natsio/prometheus-nats-exporter
+  digests:
+    amd64: sha256:f8226945daddf0c11a66470a2ea1fd985f986fb45eeadac52c941455c35f8fc4
+    arm64: sha256:55bbea79b8537a09f469dd92cdb474cc26fa5dc8f0b5ba38942bf3623e7fe156
+- registry: k8s.gcr.io
+  name: external-dns/external-dns
+  digests:
+    amd64: sha256:4cf7d828f7c26f62bce71fa69a53c327d1d036af3ab45d712342041b4bec3884
+    arm64: sha256:20cf87ac432a82a7221350a60753a2c2888493ce05775d59ca58a1cc011ee97f
+- registry: 602401143452.dkr.ecr.us-west-2.amazonaws.com
+  name: amazon/aws-load-balancer-controller
+  digests:
+    amd64: sha256:39d0df6a845726af6d91bafb40c0bcb211d148cc75cb77f90ca6b113782c2ca1
+    arm64: sha256:1bccd59c3d810f6e21d40b7d1873bd880dd1fe5e6cecfc570163cc54ab9146c0
+- registry: 602401143452.dkr.ecr.us-west-2.amazonaws.com
+  name: amazon-k8s-cni-init
+  digests:
+    amd64: sha256:47436b9f9007605ff65c47bfdd027a4f5ebef9632cbbe58880de5277ab0fcfd7
+    arm64: sha256:4cf4edaaebad3afc7f2810551838b839b8049d605b56e8450c490e43bd4b8d69
+- registry: 602401143452.dkr.ecr.us-west-2.amazonaws.com
+  name: amazon-k8s-cni
+  digests:
+    amd64: sha256:070377b12ec1ca1dfc6f8fa2dc389a9079de10a7950aecbbe562bfe51ed5ff6e
+    arm64: sha256:3511ac37a330b89865b5c28992ee34b76929abdccc051fd8b5dcf5d221c67e83
