@@ -1,0 +1,29 @@
+name: Update Image Digests
+on:
+  push:
+    paths:
+      - 'charts.yaml'
+      - 'images.yaml'
+    branches-ignore:
+      - 'main'
+  workflow_dispatch:
+
+jobs:
+  digests:
+    name: Update image digests
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Helm version update
+        uses: clarkjohnd/terraform-helm-digests@v0.0.1
+        with:
+          digests-only: "true"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          quay-username: ${{ secrets.QUAY_USERNAME }}
+          quay-password: ${{ secrets.QUAY_PASSWORD }}
+          gcr-json-key: ${{ secrets.GCR_JSON_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ECR_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ECR_SECRET_ACCESS_KEY }}
