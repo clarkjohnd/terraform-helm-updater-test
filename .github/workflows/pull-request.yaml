@@ -1,0 +1,23 @@
+name: Terraform Helm Scan
+on:
+  pull_request_target:
+    paths:
+    - 'images.yaml'
+    types:
+    - opened
+    - synchronize
+    - edited
+    - reopened
+    branches:
+    - main
+
+jobs:
+  scan:
+    name: Trivy scan Helm images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Helm version update
+        uses: clarkjohnd/terraform-helm-scanning@v0.0.1
