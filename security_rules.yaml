@@ -1,0 +1,20 @@
+- name: argoproj/argoexec
+  acceptedSeverities:
+  - cve: CVE-2022-0778
+    reason: "Argo exec not parsing certs for us"
+  - cve: CVE-2018-25032
+    reason: "Inputs not being compressed"
+  - cve: CVE-2021-42836
+    reason: "ReDOS not a concern"
+  ignoreUnfixed: true
+- name: natsio/prometheus-nats-exporter
+  acceptedSeverities:
+  - cve: CVE-2022-24450
+    reason: "etc. etc"
+  ignoreUnfixed: true
+- name: external-dns/external-dns
+  acceptedSeverities:
+  - cve: CVE-2022-0778
+    reason: "Something"
+  - cve: CVE-2018-25032
+    reason: "Something else"
