@@ -15,7 +15,7 @@ jobs:
       - name: Helm version update
         uses: clarkjohnd/terraform-helm-digests@v0.0.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.MY_GITHUB_TOKEN }} # use my user
           quay-username: ${{ secrets.QUAY_USERNAME }}
           quay-password: ${{ secrets.QUAY_PASSWORD }}
           gcr-json-key: ${{ secrets.GCR_JSON_KEY }}
